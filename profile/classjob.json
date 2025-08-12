@@ -1,4 +1,41 @@
 {
+    "OCCULT_CRESCENT": {
+        "LEVEL": {
+            "selector": ".character__job__list:has(+ .character__support_job) > div.character__job__level"
+        },
+        "EXP": {
+            "selector": ".character__job__list:has(+ .character__support_job) > div.character__job__exp",
+            "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
+        },
+        "NAME": {
+            "selector": ".character__job__list:has(+ .character__support_job) > div.character__job__name"
+        }
+    },
+    "PHANTOM_JOBS": {
+        "ROOT": {
+            "selector": "ul.character__support_job__list > li",
+            "multiple": true
+        },
+        "ICON": {
+            "selector": ".character__support_job__icon > img:nth-child(1)",
+            "attribute": "src"
+        },
+        "NAME": {
+            "selector": "p.character__support_job__name"
+        },
+        "LEVEL": {
+            "selector": "p.character__support_job__level",
+            "regex": "Lv\\. (?P<Level>\\d*)"
+        },
+        "EXP": {
+            "selector": "p.character__support_job__exp",
+            "regex": "(?P<CurrentEXP>\\S+) \\/ (?P<MaxEXP>\\S+)"
+        },
+        "MASTERED": {
+            "selector": "p.character__support_job__master",
+            "presence": true
+        }
+    },
     "BOZJA": {
         "LEVEL": {
             "selector": "div.character__job__list:nth-child(7) > div:nth-child(2)"
